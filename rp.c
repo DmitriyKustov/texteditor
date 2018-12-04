@@ -21,7 +21,7 @@ static void rp_line(int index, char *contents, int cursor, void *data);
 void rp(text txt)
 {
 
-    process_forward(txt, rp_line, txt);
+    rp_line;
 }
 
 /**
@@ -33,8 +33,8 @@ static void rp_line(int index, char *contents, int cursor, void *data)
     assert(contents != NULL);
 
     /* Декларируем неиспользуемые параметры */
-    UNUSED(cursor);
-
+    UNUSED(index);
+    
     if (cursor > 0) {
 	
 	delete_line(data, index);
